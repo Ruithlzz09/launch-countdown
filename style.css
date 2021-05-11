@@ -1,3 +1,4 @@
+/* This CSS is only suitable for 360*640px Dimension*/
 *,
 *::before,
 *::after {
@@ -11,42 +12,33 @@ html {
 }
 body {
   font-family: "Lato", sans-serif;
-}
-
-h2 {
-  font-size: 5rem;
-  font-weight: bold;
-  padding: 3rem;
+  font-size: 16px;
+  overflow: hidden;
 }
 
 .coming-soon {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-}
-
-.main-section {
-  padding-bottom: 1rem;
-}
-.countdown {
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.day,
-.hour,
-.minute,
-.second {
-  font-size: 3rem;
+.countdown {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.waiting {
-  height: 50vh;
+.container {
+  padding: 1rem;
 }
 
-.hide {
-  display: none;
+.container h3 {
+  padding: 0.5rem 0;
+}
+
+.img-section {
+  padding: 1rem;
 }
