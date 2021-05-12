@@ -15,9 +15,8 @@ const countDown = () => {
 
   let remainTime = [];
   for (let index = 0; index < 4; index++) {
-    var remain = Math.floor(
-      (gap % timeUnit[index]) / timeUnit[index + 1]
-    ).toString();
+    var remain = Math.floor((gap % timeUnit[index]) / timeUnit[index + 1]);
+    remain = remain > 0 ? remain.toString() : "00";
     remainTime[index] = remain.length === 1 ? "0" + remain : remain;
   }
 
