@@ -1,52 +1,99 @@
-*,
-*::before,
-*::after {
+body {
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: "Lato", sans-serif;
-}
-
-h2 {
-  font-size: 5rem;
-  font-weight: bold;
-  padding: 3rem;
-}
-
-.coming-soon {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  background-color: #f2f2f2;
 }
 
 .main-section {
-  padding-bottom: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+.coming-soon {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .countdown {
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
+}
+
+.container-day,
+.container-hour,
+.container-minute,
+.container-second {
   text-align: center;
 }
 
-.day,
-.hour,
-.minute,
-.second {
-  font-size: 3rem;
+.container-day,
+.container-hour,
+.container-minute,
+.container-second {
+  margin: 0;
 }
 
-.waiting {
-  height: 50vh;
+.launched-site {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.hide {
+.img-section {
+  max-width: 100%; /* Ensures the image does not exceed its original size */
+  height: 300px;   /* Set a specific height for the image section */
+  object-fit: cover; /* Maintains aspect ratio and covers the container */
+  margin-left: 20px;
+}
+
+.hide{
   display: none;
+}
+
+.loading-screen {
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 10px solid #3498db;
+  border-top: 10px solid #2987c6;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 1s linear infinite;
+  margin: auto; /* Center the spinner horizontally */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner  {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+  }
+
+  .img-section {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
