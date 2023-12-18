@@ -5,7 +5,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 // CountDown Timer
 const countDown = async() => {
   const now = new Date()
-  const target = new Date("January 03, 2023 00:00:00")
+  const target = new Date("January 01, 2024 00:00:00")
   // Calculate the difference in milliseconds
   const difference = target - now;
   await delay(3000)
@@ -15,7 +15,7 @@ const countDown = async() => {
     // Target date has already passed
     // This condition ensures zero value to be shown in case of the event is already launched
     // This condition ensures at the time of event launch countdown timer to be stop and latest change
-    console.log("Event has already occurred.")
+    console.log("Event has already passed.")
     clearInterval(launchTimer);
     document.querySelector(".coming-soon").classList.add("hide");
     document.querySelector(".img-section").classList.add("hide");
